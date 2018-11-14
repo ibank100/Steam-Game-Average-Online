@@ -56,11 +56,11 @@ def main():
     fday = ftotal/fcount
     saday = satotal/sacount
     suday = satotal/sacount
-    print("Monday average: %.2f" %mday)
-    print("Tuesday average: %.2f" %tuday)
-    print("Wednesday average: %.2f" %wday)
-    print("Thursday average: %.2f" %thday)
-    print("Friday average: %.2f" %fday)
-    print("Saturday average: %.2f" %saday)
-    print("Sunday average: %.2f" %suday)
+    print("Monday average: %i" %mday)
+    print("Tuesday average: %i" %tuday)
+    print("Wednesday average: %i" %wday)
+    print("Thursday average: %i" %thday)
+    print("Friday average: %i" %fday)
+    print("Saturday average: %i" %saday)
+    print("Sunday average: %i" %suday)
 main()
