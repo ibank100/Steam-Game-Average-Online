@@ -1,10 +1,11 @@
 import csv
-# warning : before start make sure game file(PUBG, DOTA2, CS_GO, POE, R6) is empty.
+import time
 # ... is location file from your computer or notebook.
 def read():
-    with open('.../Data/Data_Player_Averager.csv') as csvfile:
+    with open('C:/Users/Meow Bank/Desktop/project_psit/Data/Data_Player_Averager.csv') as csvfile:
         print("Start Program.")
         print("Loading.")
+        time.sleep(1)
         print("Reading data.")
         reader = csv.reader(csvfile)
         pubg = []
@@ -18,8 +19,10 @@ def read():
             csgo.append([row[0],row[3]])
             poe.append([row[0],row[4]])
             rainbow6.append([row[0],row[5]])
+            time.sleep(0.05)
 
         print("Reading completed.")
+        time.sleep(1)
         print("Start writing data.")
         print("loading.")
 
@@ -34,32 +37,37 @@ def read():
 
 def write(name, game):
     if name == 'pubg':
-        writer = csv.writer(open(".../Data/PUBG.csv", 'w',  newline=''))
+        writer = csv.writer(open("C:/Users/Meow Bank/Desktop/project_psit/Data/PUBG.csv", 'w',  newline=''))
         for data in game:
             writer.writerow((data))
+            time.sleep(0.05)
         print('"PUBG.csv" finished writing')
 
     if name == 'dota2':
-        writer = csv.writer(open(".../Data/DOTA2.csv", 'w',  newline=''))
+        writer = csv.writer(open("C:/Users/Meow Bank/Desktop/project_psit/Data/DOTA2.csv", 'w',  newline=''))
         for data in game:
             writer.writerow((data))
+            time.sleep(0.05)
         print('"DOTA2.csv" finished writing')
 
     if name == 'csgo':
-        writer = csv.writer(open(".../Data/CS_GO.csv", 'w',  newline=''))
+        writer = csv.writer(open("C:/Users/Meow Bank/Desktop/project_psit/Data/CS_GO.csv", 'w',  newline=''))
         for data in game:
             writer.writerow((data))
+            time.sleep(0.05)
         print('"CS_GO.csv" finished writing')
 
     if name == 'poe':
-        writer = csv.writer(open(".../Data/POE.csv", 'w',  newline=''))
+        writer = csv.writer(open("C:/Users/Meow Bank/Desktop/project_psit/Data/POE.csv", 'w',  newline=''))
         for data in game:
             writer.writerow((data))
+            time.sleep(0.05)
         print('"POE.csv" finished writing')
 
     if name == 'rainbow6':
-        writer = csv.writer(open(".../Data/R6.csv", 'w',  newline=''))
+        writer = csv.writer(open("C:/Users/Meow Bank/Desktop/project_psit/Data/R6.csv", 'w',  newline=''))
         for data in game:
             writer.writerow((data))
+            time.sleep(0.05)
         print('"R6.csv" finished writing')
 read()
