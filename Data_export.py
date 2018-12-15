@@ -1,4 +1,5 @@
 import csv
+# warning : before start make sure game file(PUBG, DOTA2, CS_GO, POE, R6) is empty.
 # ... is location file from your computer or notebook.
 def read():
     with open('.../Data/Data_Player_Averager.csv') as csvfile:
