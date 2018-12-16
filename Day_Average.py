@@ -1,7 +1,8 @@
-import csv
-import time
+import csv # open and read csv file.
+import time # Makes it look more realistic.
 print("|START PROGRAM|")
 def main():
+    ''' Code workflow '''
     print("|>>> INPUT GAME TOPICS <<<|")
     time.sleep(1)
     print("| 1.) PLAYERUNKNOWN'S BATTLEGROUNDS")
@@ -10,10 +11,11 @@ def main():
     print("| 4.) PATH OF EXILE")
     print("| 5.) TOM CLANCY'S RAINBOW SIX SIEGE")
     print("| 6.) ALL GAME LIST")
-    name = input()
+    name = input() # you can input full name game or number
     print("Loading.")
     time.sleep(1)
 
+# Variable value
     monday, mon_count = 0, 0
     tuesday, tue_count = 0, 0
     wednesday, wed_count = 0, 0
@@ -22,7 +24,7 @@ def main():
     saturday, sat_count = 0, 0
     sunday, sun_count = 0, 0
 
-
+# Pull name to condition
     if 'PLAYERUNKNOWN\'S BATTLEGROUNDS' in name.upper() or '1' in name.upper():
         print("-----------------------------------------------")
         print("| 1.) PLAYERUNKNOWN'S BATTLEGROUNDS")
@@ -238,6 +240,7 @@ def main():
     print("Reading completed.")
     time.sleep(2)
 
+# Find average players who played in october
     mon_player = int(monday / mon_count)
     tue_player = int(tuesday / tue_count)
     wed_player = int(wednesday / wed_count)
@@ -250,6 +253,7 @@ def main():
     show(all_day, name)
 
 def show(all_day, name_game):
+    ''' Display results from values received from main function '''
     mon_player = all_day[0]
     tue_player = all_day[1]
     wed_player = all_day[2]
