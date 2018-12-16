@@ -284,7 +284,7 @@ def show(all_day, name_game):
         print("Sunday average: %i" %sun_player)
     else:
         print('| SORRY, PROGRAM CAN\'T READ. PLEASE TRY AGAIN |')
-        show(all_day, name)
+        show(all_day, name_game)
     time.sleep(3)
 main()
 print("|END PROGRAM|")
