@@ -14,11 +14,11 @@ def read():
         poe = []
         rainbow6 = []
         for row in reader:
-            pubg.append([row[0],row[1]])
-            dota2.append([row[0],row[2]])
-            csgo.append([row[0],row[3]])
-            poe.append([row[0],row[4]])
-            rainbow6.append([row[0],row[5]])
+            pubg.append([row[0],row[1],row[2]])
+            dota2.append([row[0],row[1],row[3]])
+            csgo.append([row[0],row[1],row[4]])
+            poe.append([row[0],row[1],row[5]])
+            rainbow6.append([row[0],row[1],row[6]])
             time.sleep(0.05)
 
         print("Reading completed.")
