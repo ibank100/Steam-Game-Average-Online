@@ -32,7 +32,9 @@ def main():
         with open('.../Data/PUBG.csv') as csvfile:
             pubgfile = csv.reader(csvfile)
             for data in pubgfile:
-                if data[1] == 'Mon':
+                if data[1] == 'day':
+                    continue
+                elif data[1] == 'Mon':
                     monday += int(data[2])
                     mon_count += 1
                 elif data[1] == 'Tue':
