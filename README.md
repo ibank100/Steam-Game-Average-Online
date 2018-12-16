@@ -6,6 +6,7 @@
 -Day Average.py ใส่ลิสข้อมูลลงไป(รับค่าเป็นlist) โดยโค้ดนี่จะแสดงผลค่าเฉลี่ยจำนวนคนออนไลน์ในแต่ละวันออกมา จะรันตั้งแต่วันจันทร์เป็นวันแรก(1ตุลา2018เป็นวันจันทร์พอดี)<br>
 ## ข้อมูลมาจาก
 - https://steamdb.info/graph/?fbclid=IwAR05OA_gA3hQPdUil1VGjdzsNfDexe_y12n1_JXWwFAgZBXTiwraEBeAYOE
+- https://steamcharts.com/
 ## เครื่องมือที่ใช้
 - Python 3.7
 <br><h1>Project's member</h1>
