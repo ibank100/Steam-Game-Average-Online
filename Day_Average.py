@@ -29,7 +29,7 @@ def main():
         name = "PLAYERUNKNOWN'S BATTLEGROUNDS"
         time.sleep(0.5)
         print("Reading data.")
-        with open('C:/Users/Meow Bank/Desktop/project_psit/Data/PUBG.csv') as csvfile:
+        with open('.../Data/PUBG.csv') as csvfile:
             pubgfile = csv.reader(csvfile)
             for data in pubgfile:
                 if data[1] == 'Mon':
@@ -62,7 +62,7 @@ def main():
         name = "DOTA 2"
         time.sleep(0.5)
         print("Reading data.")
-        with open('C:/Users/Meow Bank/Desktop/project_psit/Data/DOTA2.csv') as csvfile:
+        with open('.../Data/DOTA2.csv') as csvfile:
             dotafile = csv.reader(csvfile)
             for data in dotafile:
                 if data[1] == 'day':
@@ -96,7 +96,7 @@ def main():
         name = "COUNTER-STRIKE: GLOBAL OFFENSIVE"
         time.sleep(0.5)
         print("Reading data.")
-        with open('C:/Users/Meow Bank/Desktop/project_psit/Data/CS_GO.csv') as csvfile:
+        with open('.../Data/CS_GO.csv') as csvfile:
             csgofile = csv.reader(csvfile)
             for data in csgofile:
                 if data[1] == 'day':
@@ -130,7 +130,7 @@ def main():
         name = 'PATH OF EXILE'
         time.sleep(0.5)
         print("Reading data.")
-        with open('C:/Users/Meow Bank/Desktop/project_psit/Data/POE.csv') as csvfile:
+        with open('.../Data/POE.csv') as csvfile:
             poefile = csv.reader(csvfile)
             for data in poefile:
                 if data[1] == 'day':
@@ -164,7 +164,7 @@ def main():
         name = 'TOM CLANCY\'S RAINBOW SIX SIEGE'
         time.sleep(0.5)
         print("Reading data.")
-        with open('C:/Users/Meow Bank/Desktop/project_psit/Data/R6.csv') as csvfile:
+        with open('.../Data/R6.csv') as csvfile:
             rsixfile = csv.reader(csvfile)
             for data in rsixfile:
                 if data[1] == 'day':
@@ -198,7 +198,7 @@ def main():
         name = 'ALL GAME LIST'
         time.sleep(0.5)
         print("Reading data.")
-        with open('C:/Users/Meow Bank/Desktop/project_psit/Data/Data_Player_Averager.csv') as csvfile:
+        with open('.../Data/Data_Player_Averager.csv') as csvfile:
             allgamefile = csv.reader(csvfile)
             for data in allgamefile:
                 if data[1] == 'day':
