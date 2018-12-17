@@ -248,10 +248,16 @@ def main():
     fri_player = int(friday / fri_count)
     sat_player = int(saturday / sat_count)
     sun_player = int(sunday / sun_count)
-
+    
     all_day = [mon_player, tue_player, wed_player, thu_player, fri_player, sat_player, sun_player]
     show(all_day, name)
-
+    print("Continue?")
+    print("Yes or No?")
+    anschoice = input()
+    if anschoice == "Yes" or anschoice == "yes":
+        main()
+    elif anschoice == "No" or anschoice == "no":
+        pass
 def show(all_day, name_game):
     ''' Display results from values received from main function '''
     mon_player = all_day[0]
@@ -277,7 +283,7 @@ def show(all_day, name_game):
         print('%s: %i' %(day[all_day.index(max_day)], max_day))
     elif 'LESS PLAYER PLAY GAME ON OCTOBER.' in name.upper() or '2' in name.upper():
         min_day = min(mon_player, tue_player, wed_player, thu_player, fri_player, sat_player, sun_player)
-        print('%s: %i' %(day[all_day.index(mix_day)], min_day))
+        print('%s: %i' %(day[all_day.index(min_day)], min_day))
     elif 'ALL DAYS PLAYER AVERAGE' in name.upper() or '3' in name.upper():
         print("Monday average: %i" %mon_player)
         print("Tuesday average: %i" %tue_player)
