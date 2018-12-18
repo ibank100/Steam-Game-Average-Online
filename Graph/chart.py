@@ -1,17 +1,8 @@
 
 import csv
-import pygal as pg
+import pygal
 import re
 
-print("|START PROGRAM|")
-print("|>>> Change data into chart <<<|")
-print("| 1.) PLAYERUNKNOWN'S BATTLEGROUNDS")
-print("| 2.) DOTA 2")
-print("| 3.) COUNTER-STRIKE: GLOBAL OFFENSIVE")
-print("| 4.) PATH OF EXILE")
-print("| 5.) TOM CLANCY'S RAINBOW SIX SIEGE")
-print("| 6.) ALL GAME LIST")
-print("Loading.")
 def main(count):
 
     monday, mon_count = 0, 0
@@ -25,11 +16,7 @@ def main(count):
     name = ""
 
     if count == 0:
-        print("-----------------------------------------------")
-        print("| 1.) PLAYERUNKNOWN'S BATTLEGROUNDS")
         name = "PLAYERUNKNOWN'S BATTLEGROUNDS"
-        time.sleep(0.5)
-        print("Reading data.")
         with open('C:/Users/Meow Bank/Desktop/project_psit/Data/PUBG.csv') as csvfile:
             pubgfile = csv.reader(csvfile)
             for data in pubgfile:
@@ -59,11 +46,7 @@ def main(count):
 
 
     elif count == 1:
-        print("-----------------------------------------------")
-        print("| 2.) DOTA 2")
         name = "DOTA 2"
-        time.sleep(0.5)
-        print("Reading data.")
         with open('C:/Users/Meow Bank/Desktop/project_psit/Data/DOTA2.csv') as csvfile:
             dotafile = csv.reader(csvfile)
             for data in dotafile:
@@ -92,11 +75,7 @@ def main(count):
                     sun_count += 1
 
     elif count == 2:
-        print("-----------------------------------------------")
-        print("| 3.) COUNTER-STRIKE: GLOBAL OFFENSIVE")
         name = "COUNTER-STRIKE: GLOBAL OFFENSIVE"
-        time.sleep(0.5)
-        print("Reading data.")
         with open('C:/Users/Meow Bank/Desktop/project_psit/Data/CS_GO.csv') as csvfile:
             csgofile = csv.reader(csvfile)
             for data in csgofile:
@@ -125,11 +104,7 @@ def main(count):
                     sun_count += 1
 
     elif count == 3:
-        print("-----------------------------------------------")
-        print("| 4.) PATH OF EXILE")
         name = 'PATH OF EXILE'
-        time.sleep(0.5)
-        print("Reading data.")
         with open('C:/Users/Meow Bank/Desktop/project_psit/Data/POE.csv') as csvfile:
             poefile = csv.reader(csvfile)
             for data in poefile:
@@ -158,11 +133,7 @@ def main(count):
                     sun_count += 1
 
     elif count == 4:
-        print("-----------------------------------------------")
-        print("| 5.) TOM CLANCY'S RAINBOW SIX SIEGE")
         name = 'TOM CLANCY\'S RAINBOW SIX SIEGE'
-        time.sleep(0.5)
-        print("Reading data.")
         with open('C:/Users/Meow Bank/Desktop/project_psit/Data/R6.csv') as csvfile:
             rsixfile = csv.reader(csvfile)
             for data in rsixfile:
@@ -191,11 +162,7 @@ def main(count):
                     sun_count += 1
 
     elif count == 5:
-        print("-----------------------------------------------")
-        print("| 6.) ALL GAME LIST")
         name = 'ALL GAME LIST'
-        time.sleep(0.5)
-        print("Reading data.")
         with open('C:/Users/Meow Bank/Desktop/project_psit/Data/Data_Player_Averager.csv') as csvfile:
             allgamefile = csv.reader(csvfile)
             for data in allgamefile:
@@ -223,8 +190,6 @@ def main(count):
                     sunday += int(data[2])+int(data[3])+int(data[4])+int(data[5])+int(data[6])
                     sun_count += 1
 
-    print("Reading completed.")
-
     mon_player = int(monday / mon_count)
     tue_player = int(tuesday / tue_count)
     wed_player = int(wednesday / wed_count)
@@ -237,15 +202,32 @@ def main(count):
     all_day = [mon_player, tue_player, wed_player, thu_player, fri_player, sat_player, sun_player]
     chart_horizontal = pygal_line(all_day, name)
     name = name + '\' average graph.svg'
-    chart_horizontal.render_to_file(name)
+    if 'PLAYERUNKNOWN\'S BATTLEGROUNDS' in name:
+        chart_horizontal.render_to_file("C:/Users/Meow Bank/Desktop/project_psit/graph/PLAYERUNKNOWN\'S BATTLEGROUNDS.svg")
+
+    elif 'DOTA 2' in name:
+        chart_horizontal.render_to_file("C:/Users/Meow Bank/Desktop/project_psit/graph/DOTA 2.svg")
+
+    elif 'COUNTER-STRIKE: GLOBAL OFFENSIVE' in name:
+        chart_horizontal.render_to_file("C:/Users/Meow Bank/Desktop/project_psit/graph/COUNTER-STRIKE GLOBAL OFFENSIVE.svg")
+
+    elif 'PATH OF EXILE' in name:
+        chart_horizontal.render_to_file("C:/Users/Meow Bank/Desktop/project_psit/graph/PATH OF EXILE.svg")
+
+    elif 'TOM CLANCY\'S RAINBOW SIX SIEGE' in name:
+        chart_horizontal.render_to_file("C:/Users/Meow Bank/Desktop/project_psit/graph/TOM CLANCY\'S RAINBOW SIX SIEGE.svg")
+
+    elif 'ALL GAME LIST' in name:
+        chart_horizontal.render_to_file("C:/Users/Meow Bank/Desktop/project_psit/graph/ALL GAME LIST.svg")
+
     if count != 5:
         count += 1
         main(count)
 
 def pygal_line(all_day, name_game):
     ''' Make HorizontalBar chart from pygal '''
-    line_chart = pg.HorizontalBar()
-    line_chart.title = '%s\'s average pre days.' %name
+    line_chart = pygal.HorizontalBar()
+    line_chart.title = '%s\'s average pre days.' %name_game
     day = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     for i in range(0,7):
         line_chart.add(day[i], all_day[i])
