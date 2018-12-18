@@ -12,8 +12,8 @@
 - https://steamdb.info/graph/?fbclid=IwAR05OA_gA3hQPdUil1VGjdzsNfDexe_y12n1_JXWwFAgZBXTiwraEBeAYOE
 - https://steamcharts.com/
 ## เครื่องมือที่ใช้
-- Python 3.7
-- Sublime Text 3 (Program สำหรับเขียนโค้ด + ช่วยในการเขียน)
+- Python
+- Pygal
 ## Project's member
 ๐ นายสินสวัสดิ์ อภิชัยสมพล - 61070240<br>
 ๐ นายภาคภูมิ สวัสดี - 61070158<br>
